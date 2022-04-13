@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Form Validator </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1> Sign Up Form</h1>
+    <!-- Form -->
+    <form id="form">
+      <!-- Full name -->
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Full Name" required minlength="1" maxlength="100 name=" name"">
+      </div>
+
+      <!-- Phone Number -->
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="999-999-9999" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone">
+      </div>
+
+      <!-- Email address -->
+      <div class="form-group">
+        <label for="Email">Email Address</label>
+        <input type="email" id="Email" placeholder="johnmathew@gmail.com" required name="email">
+      </div>
+
+      <!-- Website URL  -->
+      <div class="form-group">
+        <label for="website">Website Url</label>
+        <input type="url" id="website" placeholder="http://www.google.com" required name="website">
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password1">Password</label>
+        <input type="password" id="password1" placeholder="Create Password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="Please include 1 uppercase character, 1 lowercase charecter
+            and 1 number">
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-group">
+        <label for="password2">Confirm Password</label>
+        <input type="password" id="password2" placeholder="Confirm Password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" name="password">
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit">Register</button>
+
+    </form>
+    <!-- Error/Success Message -->
+    <div class="message-container">
+      <h3 id="message">Don't Hesitate!</h3>
+    </div>
+
+
+  </div>
+  <!-- Script -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
